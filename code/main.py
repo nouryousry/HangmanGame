@@ -95,7 +95,7 @@ class Hangman:
                    |     
                    -
                 """)
-        elif self.mistakes==2:
+        elif self.mistakes==3:
             print(    """
                    --------
                    |      |
@@ -105,7 +105,7 @@ class Hangman:
                    |     
                    -
                 """)
-        elif self.mistakes == 3:
+        elif self.mistakes == 4:
             print("""
                      --------
                      |      |
@@ -115,7 +115,7 @@ class Hangman:
                      |     
                      -
                   """)
-        elif self.mistakes == 4:
+        elif self.mistakes == 5:
             print("""
                      --------
                      |      |
@@ -129,8 +129,7 @@ class Hangman:
     def __init__(self):
         self.word=self.pick_word()
         self.guessed_word=""
-        for char in range(len(self.word)):
-            self.guessed_word+="_"
+        self.guessed_word="_"*len(self.word)
         self.mistakes=0
         self.guesses=len(set(self.word))
         self.won=False
@@ -142,7 +141,7 @@ class Hangman:
 
 
 def main():
-    game=Hangman()
+    Hangman()
 
 
 if __name__ == "__main__":
