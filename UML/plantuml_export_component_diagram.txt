@@ -1,0 +1,12 @@
+@startuml
+
+title Component Diagram
+
+[Game Logic] as G
+[Data Store] as DA  
+[Graphic User\nInterface] as GUI
+[User Input] as ui
+GUI-->G
+G->DA 
+GUI-->ui
+@enduml

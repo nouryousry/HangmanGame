@@ -1,0 +1,39 @@
+@startuml
+left to right direction
+actor "User 1" as u1
+actor "User 2" as u2
+actor "Admin" as a
+rectangle Hangman {
+  usecase "Choose Difficulty" as UC1
+  usecase "Choose Letter" as UC2
+  usecase "Reset Game" as UC3
+  usecase "Start Multiplayer Game" as UC4
+  usecase "Pick Word for Other User" as UC5
+  usecase "Add New Words" as UC6 
+  usecase "Select Word" as UC7
+  usecase "Check Letter" as UC8
+  usecase "Increase Mistakes Counter" as UC9
+  usecase "Display Letter" as UC10
+  usecase "Display Hangman" as UC11
+  (UC1) .[hidden]> (UC2) : include
+  (UC4) .[hidden]> (UC2) : extends
+  (UC4) .right.> (UC5) : extends
+  (UC1) ..>(UC7) : include
+  (UC2) ..>(UC8) : include
+  (UC8).>(UC9) : extends
+  (UC8) ..>(UC10) : extends
+  (UC9)..>(UC11) : includes
+  (UC6).[hidden]>(UC10)
+  (UC1).[hidden]right.>(UC2)
+  (UC3).[hidden]right.>(UC1)
+}
+u1-[hidden]>u2
+u1 --> UC1
+u1 --> UC2
+u1 --> UC3
+u1 --> UC4
+u1 -[hidden]-> UC5
+u2 --> UC5
+UC6<--a
+u2-->UC4
+@enduml
