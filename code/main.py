@@ -1,147 +1,155 @@
-import math
 import random
-import re
 
+#immutable tuples to keep the words
 easy_wordbank = ("cat", "cars", "pooh", "toys", "game","tell","fun")
 medium_wordbank=("aladdin", "godzilla","marvel","amazed","funny")
-hard_wordbank=("terminator","magnificent","awesome","yearn","follicular")
+hard_wordbank=("terminator","magnificent","awesome","yearn","follicular",\
+"impressionable", "misrepresentation", "antiskepticism")
 
 
-class Hangman:
-    wins=0
-    losses=0
+def display(guessed_word):
+    statement=""
+    for char in guessed_word:
+            statement += char + " "
+    print(statement)
 
-    def display(self):
-        statement=""
-        for char in self.guessed_word:
-                statement += char + " "
-        print(statement)
+def check_done(display_terms):
+    done = True
+    for term in display_terms:
+        for char in term:
+            if char == "_":
+                done = False
+    return done
 
-    def check_done(self):
-        done = True
-        for term in display_terms:
-            for char in term:
-                if char == "_":
-                    done = False
-        return done
-    def choose_difficulty(self):
-        difficulty=input("Please choose if you want it easy, medium or hard: ")
-        while difficulty not in ("easy","medium","hard"):
-            print("wrong input")
-            difficulty = input("Please choose if you want it easy, medium or hard: ")
-        return difficulty
 
-    def pick_word(self):
-        dif=self.choose_difficulty()
-        if dif=="easy":
-            word_id = random.randrange(0, len(easy_wordbank)-1)
-            return easy_wordbank[word_id]
-        elif dif=="medium":
-            word_id = random.randrange(0, len(medium_wordbank)-1)
-            return medium_wordbank[word_id]
-        elif dif=="hard":
-            word_id = random.randrange(0, len(hard_wordbank)-1)
-            return hard_wordbank[word_id]
 
-    def choose_letter(self):
-        letter=input("Choose a letter: ")
-        while re.search('[a-zA-Z]',letter)==False or len(letter)!=1:
-            print("You entered a wromg character, try again!")
-            letter = input("Choose a letter: ")
-        self.check_letter(letter)
 
-    def check_letter(self,letter):
-        if letter in self.word:
-            index=self.word.find(letter)
-            while index!=-1:
-                self.guessed_word=self.guessed_word[0:index]+letter+self.guessed_word[index+1:]
-                index=self.word.find(letter,index+1)
-            self.guesses-=1
-            if self.guesses==0:
-                Hangman.wins+=1
-                self.won=True
-                print("Congratulations! You saved the man!")
-                print("Your score is " + str(Hangman.wins) + " wins and " + str(Hangman.losses) + " losses.")
-            #self.check_win()
 
+def check_letter(letter,word,guessed_word):
+    if letter in word:
+        index=word.find(letter)
+        while index!=-1:
+            guessed_word=guessed_word[0:index]+letter+guessed_word[index+1:]
+            index=word.find(letter,index+1)
+        guesses-=1
+        if guesses==0:
+            wins+=1
+            won=True
+            print("Congratulations! You saved the man!")
+            print("Your score is " + str(wins) + " wins and " + str(losses) + " losses.")
+        #self.check_win()
+
+    else:
+        mistakes+=1
+        display_hangman()
+        if mistakes==4:
+            lost=True
+            losses+=1
+            print("You have lost the game!")
+            print("Your score is "+str(wins)+" wins and "+str(losses)+" losses.")
+
+def display_hangman(tries):
+
+    if tries==4:
+        print("""
+               --------
+               |      |
+               |      
+               |    
+               |      
+               |     
+               -
+            """)
+    elif tries==3:
+        print("""
+               --------
+               |      |
+               |      O
+               |    
+               |      
+               |     
+               -
+            """)
+    elif tries==2:
+        print(    """
+               --------
+               |      |
+               |      O
+               |      |
+               |      |
+               |     
+               -
+            """)
+    elif tries == 1:
+        print("""
+                 --------
+                 |      |
+                 |      O
+                 |     \|/
+                 |      |
+                 |     
+                 -
+              """)
+    elif tries == 0:
+        print("""
+                 --------
+                 |      |
+                 |      O
+                 |     \|/
+                 |      |
+                 |     /|\ 
+                 -
+            """)
+
+
+
+
+
+# This function implements the game logic for hangman and is recursive in nature
+def hangman(word, tries, secret_word):
+    if tries == 0:
+        print("You lost! The word was " + word + ".")
+        return None
+    if word == secret_word:
+        print("Congratulations! You saved the man!")
+        return None
+    print("Current word: " + secret_word)
+    print("You have " + str(tries) + " tries left.")
+    letter = input("Enter a letter: ").lower()
+    if letter in word:
+        print("Correct!")
+        word_list = [char if char == letter else secret_word[i] for i, char in enumerate(word)]
+        secret_word = "".join(word_list)
+    else:
+        tries -= 1
+        display_hangman(tries)
+    hangman(word, tries, secret_word)
+
+
+
+def pick_word():
+    difficulty=input("Please choose if you want it easy, medium or hard: ").lower()
+    def word_bank(difficulty):
+        if difficulty == "easy":
+            return easy_wordbank
+        elif difficulty == "medium":
+            return medium_wordbank
+        elif difficulty == "hard":
+            return hard_wordbank
         else:
-            self.mistakes+=1
-            self.display_hangman()
-            if self.mistakes==4:
-                self.lost=True
-                Hangman.losses+=1
-                print("You have lost the game!")
-                print("Your score is "+str(Hangman.wins)+" wins and "+str(Hangman.losses)+" losses.")
+            return None
+    return random.choice(word_bank(difficulty))
 
-    def display_hangman(self):
-
-        if self.mistakes==1:
-            print("""
-                   --------
-                   |      |
-                   |      
-                   |    
-                   |      
-                   |     
-                   -
-                """)
-        elif self.mistakes==2:
-            print("""
-                   --------
-                   |      |
-                   |      O
-                   |    
-                   |      
-                   |     
-                   -
-                """)
-        elif self.mistakes==3:
-            print(    """
-                   --------
-                   |      |
-                   |      O
-                   |      |
-                   |      |
-                   |     
-                   -
-                """)
-        elif self.mistakes == 4:
-            print("""
-                     --------
-                     |      |
-                     |      O
-                     |     \|/
-                     |      |
-                     |     
-                     -
-                  """)
-        elif self.mistakes == 5:
-            print("""
-                     --------
-                     |      |
-                     |      O
-                     |     \|/
-                     |      |
-                     |     /|\ 
-                     -
-                  """)
-
-    def __init__(self):
-        self.word=self.pick_word()
-        self.guessed_word=""
-        self.guessed_word="_"*len(self.word)
-        self.mistakes=0
-        self.guesses=len(set(self.word))
-        self.won=False
-        self.lost=False
-        while self.lost==False and self.won==False:
-            self.display()
-            self.choose_letter()
-
+# This function sets up the game and calls the hangman function
+def play_game():
+    word = pick_word()
+    secret_word = "_" * len(word)
+    tries = 5
+    hangman(word, tries, secret_word)
 
 
 def main():
-    Hangman()
+    play_game()
 
 
 if __name__ == "__main__":
