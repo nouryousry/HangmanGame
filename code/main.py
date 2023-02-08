@@ -2,9 +2,9 @@ import math
 import random
 import re
 
-easy_wordbank = ["cat", "cars", "pooh", "toys", "game","tell","fun"]
-medium_wordbank=["aladdin", "godzilla","marvel","amazed","funny"]
-hard_wordbank=["terminator","magnificent","awesome","yearn","follicular"]
+easy_wordbank = ("cat", "cars", "pooh", "toys", "game","tell","fun")
+medium_wordbank=("aladdin", "godzilla","marvel","amazed","funny")
+hard_wordbank=("terminator","magnificent","awesome","yearn","follicular")
 
 
 class Hangman:
