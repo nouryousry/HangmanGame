@@ -3,6 +3,7 @@ import random
 from src.main.python import main
 
 class MyTestCase(unittest.TestCase):
+   #unittest for main 
     def test_play_game(self):
         random.seed(0)
         result = main.play_game()
