@@ -1,0 +1,9 @@
+hangman.py
+main.py
+setup.py
+hangman.egg-info/PKG-INFO
+hangman.egg-info/SOURCES.txt
+hangman.egg-info/dependency_links.txt
+hangman.egg-info/namespace_packages.txt
+hangman.egg-info/top_level.txt
+hangman.egg-info/zip-safe

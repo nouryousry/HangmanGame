@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcdbd813-a55b-44a4-84e4-8f65c05a131e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/hangman.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hangman_unittests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/python/main_unittest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../DSL/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../DSL/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../DSL/.idea/DSL.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../DSL/.idea/DSL.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../DSL/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DSL/.idea/misc.xml" afterDir="false" />
@@ -11,12 +10,15 @@
       <change beforePath="$PROJECT_DIR$/../DSL/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DSL/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../DSL/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../DSL/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/code.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/code.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hangman.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hangman_unittests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Unit Test" />
         <option value="Python Script" />
+        <option value="Python Unit Test" />
       </list>
     </option>
   </component>
@@ -43,14 +45,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "F:/BHT/CS for big data/C_expressions_py/C3_name_test.py"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/BHT/CS for big data/C_expressions_py/C3_name_test.py&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Python tests.Python tests for hangman_unittests.HangmanTests.test_word_bank">
+}</component>
+  <component name="RunManager" selected="Python tests.Python tests for hangman_unittests.HangmanTests">
+    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="code" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/main/python" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main/python/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="code" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -83,20 +106,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;hangman_unittests.HangmanTests&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for hangman_unittests.HangmanTests.test_check_done" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="code" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;hangman_unittests.HangmanTests.test_check_done&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -144,11 +153,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for hangman_unittests.HangmanTests.test_word_bank" />
         <item itemvalue="Python tests.Python tests for hangman_unittests.HangmanTests" />
+        <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python tests.Python tests for hangman_unittests.HangmanTests.test_word_bank" />
         <item itemvalue="Python tests.Python tests for hangman_unittests.HangmanTests.test_check_letter" />
         <item itemvalue="Python tests.Python tests for hangman_unittests.HangmanTests.test_display_hangman" />
-        <item itemvalue="Python tests.Python tests for hangman_unittests.HangmanTests.test_check_done" />
       </list>
     </recent_temporary>
   </component>

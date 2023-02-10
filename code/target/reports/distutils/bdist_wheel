@@ -1,0 +1,41 @@
+running clean
+'build\lib' does not exist -- can't clean it
+'build\bdist.win-amd64' does not exist -- can't clean it
+'build\scripts-3.9' does not exist -- can't clean it
+running bdist_wheel
+running build
+running build_py
+creating build
+creating build\lib
+copying hangman.py -> build\lib
+copying main.py -> build\lib
+f:\github\hangmangame\code\.pybuilder\plugins\cpython-3.9.7.final.0\lib\site-packages\setuptools\command\install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+installing to build\bdist.win-amd64\wheel
+running install
+running install_lib
+creating build\bdist.win-amd64
+creating build\bdist.win-amd64\wheel
+copying build\lib\hangman.py -> build\bdist.win-amd64\wheel\.
+copying build\lib\main.py -> build\bdist.win-amd64\wheel\.
+running install_egg_info
+running egg_info
+writing hangman.egg-info\PKG-INFO
+writing dependency_links to hangman.egg-info\dependency_links.txt
+writing namespace_packages to hangman.egg-info\namespace_packages.txt
+writing top-level names to hangman.egg-info\top_level.txt
+reading manifest file 'hangman.egg-info\SOURCES.txt'
+writing manifest file 'hangman.egg-info\SOURCES.txt'
+Copying hangman.egg-info to build\bdist.win-amd64\wheel\.\hangman-1.0.dev0-py3.9.egg-info
+running install_scripts
+creating build\bdist.win-amd64\wheel\hangman-1.0.dev0.dist-info\WHEEL
+creating 'dist\hangman-1.0.dev0-py3-none-any.whl' and adding 'build\bdist.win-amd64\wheel' to it
+adding 'hangman.py'
+adding 'main.py'
+adding 'hangman-1.0.dev0.dist-info/METADATA'
+adding 'hangman-1.0.dev0.dist-info/WHEEL'
+adding 'hangman-1.0.dev0.dist-info/namespace_packages.txt'
+adding 'hangman-1.0.dev0.dist-info/top_level.txt'
+adding 'hangman-1.0.dev0.dist-info/zip-safe'
+adding 'hangman-1.0.dev0.dist-info/RECORD'
+removing build\bdist.win-amd64\wheel

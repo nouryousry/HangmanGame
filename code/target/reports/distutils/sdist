@@ -1,0 +1,33 @@
+running clean
+'build\lib' does not exist -- can't clean it
+'build\bdist.win-amd64' does not exist -- can't clean it
+'build\scripts-3.9' does not exist -- can't clean it
+running sdist
+running egg_info
+creating hangman.egg-info
+writing hangman.egg-info\PKG-INFO
+writing dependency_links to hangman.egg-info\dependency_links.txt
+writing namespace_packages to hangman.egg-info\namespace_packages.txt
+writing top-level names to hangman.egg-info\top_level.txt
+writing manifest file 'hangman.egg-info\SOURCES.txt'
+reading manifest file 'hangman.egg-info\SOURCES.txt'
+writing manifest file 'hangman.egg-info\SOURCES.txt'
+warning: sdist: standard file not found: should have one of README, README.rst, README.txt, README.md
+
+running check
+creating hangman-1.0.dev0
+creating hangman-1.0.dev0\hangman.egg-info
+copying files to hangman-1.0.dev0...
+copying hangman.py -> hangman-1.0.dev0
+copying main.py -> hangman-1.0.dev0
+copying setup.py -> hangman-1.0.dev0
+copying hangman.egg-info\PKG-INFO -> hangman-1.0.dev0\hangman.egg-info
+copying hangman.egg-info\SOURCES.txt -> hangman-1.0.dev0\hangman.egg-info
+copying hangman.egg-info\dependency_links.txt -> hangman-1.0.dev0\hangman.egg-info
+copying hangman.egg-info\namespace_packages.txt -> hangman-1.0.dev0\hangman.egg-info
+copying hangman.egg-info\top_level.txt -> hangman-1.0.dev0\hangman.egg-info
+copying hangman.egg-info\zip-safe -> hangman-1.0.dev0\hangman.egg-info
+Writing hangman-1.0.dev0\setup.cfg
+creating dist
+Creating tar archive
+removing 'hangman-1.0.dev0' (and everything under it)

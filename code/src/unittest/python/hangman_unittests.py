@@ -1,6 +1,6 @@
 import unittest
 import random
-import hangman
+from src.main.python import hangman
 
 
 class HangmanTests(unittest.TestCase):
