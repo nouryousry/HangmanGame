@@ -20,6 +20,7 @@ class HangmanTests(unittest.TestCase):
     def test_word_bank(self):
         self.assertIn(hangman.pick_word("easy"),hangman.easy_wordbank)
 
+    #testing the whole game
     def test_play_game(self):
         random.seed(0)
         result = hangman.play_game()
