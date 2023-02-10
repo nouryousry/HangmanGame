@@ -4,7 +4,7 @@ from src.main.python import hangman
 
 
 class HangmanTests(unittest.TestCase):
-
+    #test case for displaying hangman
     def test_display_hangman(self):
         tries = 4
         result = hangman.display_hangman(tries)
