@@ -6,6 +6,9 @@ medium_wordbank=("aladdin", "godzilla","marvel","amazed","funny","loyal","regard
 hard_wordbank=("terminator","magnificent","awesome","yearn","follicular",\
 "impressionable", "misrepresentation", "antiskepticism")
 
+
+#Functional Programming: All functions here are side-effect free functions
+
 #function to display the hangman shape
 def display_hangman(tries):
     """input: number of trials left
@@ -87,7 +90,7 @@ def hangman(word, tries, guessed_word):
         print(display_hangman(tries))
     hangman(word, tries, guessed_word)
 
-
+#Functional Programming
 #use of closure as well as high-order functions where
 #word_bank function is used as a return value of pick_word function
 def pick_word(difficulty):
@@ -120,3 +123,4 @@ def play_game():
     guessed_word = "_" * len(word)
     tries = 5
     hangman(word, tries, guessed_word)
+    print(tries)
