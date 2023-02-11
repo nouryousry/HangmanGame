@@ -21,10 +21,32 @@ Usecase and component diagrams were created by planttext and activity diagram wa
 Metrics could be found as tags at the top of this readme file. They were created using Sonarcloud.
 
 ## 5.Clean Code Development
+- I have added all principles that I had in mind when developing this code in this [cheat sheet](https://github.com/nouryousry/HangmanGame/blob/main/Cheat%20Sheet.pdf)
 - Any line of code that will not be easily interpreted had a comment above it to explain it (cheat sheet #2)
 - All variables have meaningful names that relate to their role (cheat sheet #1)
 - All functions have docstrings defining input, output as well as short description (cheat sheet #3)
 - No code is repeated
 - Meaningful function names (cheat sheet #10)
 
+##6.Build Management
+I have used pybuilder to manage the builds, the file of used could be found [here](https://github.com/nouryousry/HangmanGame/blob/main/build.py) as well as a [screenshot](https://github.com/nouryousry/HangmanGame/blob/main/successful_build.png) of first successful build
+
+##7.Unit Tests
+Multiple unit tests were used and were integrated by pybuilder to run each time before creating a build. The unittests file could be found [here](https://github.com/nouryousry/HangmanGame/blob/main/src/unittest/python/hangman_unittests.py)
+
+##8.Continuous Delivery
+For continuous delivery, Github Actions was used. It integrated well with Python and pybuilder and creates a [workflow](https://github.com/nouryousry/HangmanGame/actions) every time I push which in turn creates a build using pybuilder
+The script used could be found [here](https://github.com/nouryousry/HangmanGame/blob/main/.github/workflows/python-app.yml)
+
+##9.IDE
+I have used pycharm as IDE. It integrates well with Github and is easy to use. It also has a dark theme which is pretty comfy for me.
+Best shortcut that I tend to use alot is Ctrl+Alt+Shift+Click and drag the mouse over the desired parts of code to put multiple cursors at the same time.
+It's usually useful when indenting or adding/ deleting hash for comments. Also, shift+tab inindents a line, which is useful when adding wrong indents for a line of code.
+
+##10.DSL
+For DSL, I have added a separate piece of code. It's a creates personalised bedtime story for kids based on the name and the gender that was entered by the user. 
+The code could be viewed [here](https://github.com/nouryousry/HangmanGame/blob/main/DSL/main.py)
+
+##11.Functional Programming
+the [hangman file](https://github.com/nouryousry/HangmanGame/blob/main/src/main/python/hangman.py) had been re-factored to turn into functional programming. All the functions are side-effect free and also has an [higher-order function](https://github.com/nouryousry/HangmanGame/blob/main/src/main/python/hangman.py#L96) with closures.
 
