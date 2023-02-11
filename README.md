@@ -19,3 +19,12 @@ Usecase and component diagrams were created by planttext and activity diagram wa
 
 ## 4.Metrics  
 Metrics could be found as tags at the top of this readme file. They were created using Sonarcloud.
+
+## 5.Clean Code Development
+- Any line of code that will not be easily interpreted had a comment above it to explain it (cheat sheet #2)
+- All variables have meaningful names that relate to their role (cheat sheet #1)
+- All functions have docstrings defining input, output as well as short description (cheat sheet #3)
+- No code is repeated
+- Meaningful function names (cheat sheet #10)
+
+
